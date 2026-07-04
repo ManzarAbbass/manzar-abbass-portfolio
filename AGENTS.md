@@ -1,3 +1,18 @@
+# Portfolio — Manzar Abbass
+
+A personal freelance portfolio website for Manzar Abbass, 
+a Full Stack Developer specialising in web apps and SaaS 
+tools using Next.js, TypeScript, and modern databases.
+
+## Context Files 
+
+Read the following to get the full context of the project 
+
+- @context/project-overview.md
+- @context/current-feature.md
+- @context/coding-standards.md
+- @context/ai-interaction.md
+
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
