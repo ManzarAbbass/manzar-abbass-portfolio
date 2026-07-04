@@ -16,4 +16,4 @@
 
 ## History
 
-<!-- Keep this updated. Earliest to latest -->
+- 2026-07-05: Initial Next.js and Tailwind CSS setup with project scaffolding
