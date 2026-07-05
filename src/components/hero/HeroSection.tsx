@@ -12,12 +12,12 @@ export default function HeroSection() {
 
           <h1 className="mt-6 font-serif text-5xl font-black leading-none tracking-tight [text-shadow:_0_0_1px_#fff,0_0_2px_rgba(255,255,255,0.3)] md:text-6xl lg:text-7xl">
             I build{" "}
-            <span className="italic font-black text-gray-400">software</span>
+            <span className="italic font-black text-[#818281]">software</span>
             <br />
             that ships.
           </h1>
 
-          <p className="mt-6 max-w-lg text-base leading-relaxed text-gray-400 sm:text-lg">
+          <p className="mt-6 max-w-lg text-base leading-relaxed text-[#818281] sm:text-lg">
             Full-stack web apps and SaaS tools built with Next.js,
             TypeScript, and modern databases. Self-taught developer
             focused on clean architecture and shipping fast.

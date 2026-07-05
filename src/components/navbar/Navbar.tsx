@@ -24,7 +24,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm uppercase tracking-widest text-gray-400 transition-colors hover:text-white"
+                className="text-sm uppercase tracking-widest text-[#818281] transition-colors hover:text-white"
               >
                 {link.label}
               </a>
@@ -58,7 +58,7 @@ export default function Navbar() {
                 <a
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded px-3 py-2 text-sm uppercase tracking-widest text-gray-400 transition-colors hover:bg-white/10 hover:text-white"
+                  className="block rounded px-3 py-2 text-sm uppercase tracking-widest text-[#818281] transition-colors hover:bg-white/10 hover:text-white"
                 >
                   {link.label}
                 </a>
