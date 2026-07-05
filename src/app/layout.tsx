@@ -1,8 +1,23 @@
 import type { Metadata } from "next";
+import { Playfair_Display, JetBrains_Mono } from "next/font/google";
+import "./globals.css";
+
+const serif = Playfair_Display({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-serif",
+});
+
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-mono",
+});
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "Personal portfolio",
+  title: "Manzar Abbass — Full Stack Developer",
+  description:
+    "Full Stack Developer specialising in web apps and SaaS tools built with Next.js, TypeScript, and modern databases.",
 };
 
 export default function RootLayout({
@@ -11,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className={`${serif.variable} ${mono.variable}`}>
+      <body className="font-mono antialiased">{children}</body>
     </html>
   );
 }
