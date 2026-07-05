@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   title: "Manzar Abbass — Full Stack Developer",
   description:
     "Full Stack Developer specialising in web apps and SaaS tools built with Next.js, TypeScript, and modern databases.",
+  icons: { icon: "/icon.svg" },
 };
 
 export default function RootLayout({
