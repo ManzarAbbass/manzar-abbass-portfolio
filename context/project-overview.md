@@ -114,6 +114,16 @@ page that converts visitors into clients.
 
 ---
 
+## Design Reference
+
+Refer to the file below as visual reference for each section:
+
+- @context/portfolioui/hero.md
+- @context/portfolioui/services.md
+- @context/portfolioui/selected-work.md
+- @context/portfolioui/process.md
+- @context/portfolioui/contact.md
+
 ## Rules
 
 > ⚠️ Never add sections not listed above
