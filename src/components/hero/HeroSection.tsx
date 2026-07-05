@@ -1,16 +1,16 @@
 export default function HeroSection() {
   return (
     <section className="border-b border-white/20">
-      <div className="mx-auto flex min-h-screen max-w-6xl flex-col md:flex-row">
-        <div className="flex flex-1 flex-col justify-center px-6 pt-24 md:border-r md:border-white/10 md:pr-12 md:pt-0">
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#EAB308] bg-transparent px-4 py-1.5">
-            <span className="h-2 w-2 rounded-full bg-[#EAB308]" />
-            <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#EAB308]">
-              Open to opportunities
+      <div className="mx-auto flex min-h-screen max-w-6xl flex-col pt-20 md:flex-row md:gap-32 md:pt-24 lg:gap-48">
+        <div className="flex flex-1 flex-col justify-center pl-0 pr-6 pt-24 md:border-r md:border-white/10 md:pr-24 md:pt-0">
+          <div className="flex items-center gap-2">
+            <span className="h-px w-8 shrink-0 bg-[#EAB308]/40" />
+            <span className="whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-[#EAB308]">
+              FullStack Developer<span className="mx-2 text-[#EAB308]/40">●</span>Open to Opportunities
             </span>
           </div>
 
-          <h1 className="mt-6 font-serif text-5xl font-black leading-none tracking-tight [text-shadow:_0_0_1px_#fff,0_0_2px_rgba(255,255,255,0.3)] md:text-6xl lg:text-7xl">
+          <h1 className="mt-6 font-serif text-5xl font-black leading-none tracking-tight [text-shadow:_0_0_1px_#fff,0_0_2px_rgba(255,255,255,0.3)] md:text-7xl lg:text-8xl">
             I build{" "}
             <span className="italic font-black text-[#818281]">software</span>
             <br />
@@ -104,6 +104,37 @@ export default function HeroSection() {
 
               <path d="M130 160 L140 155 L140 165 Z" fill="#EAB308" opacity="0.12" />
               <path d="M270 240 L260 235 L260 245 Z" fill="#EAB308" opacity="0.12" />
+
+              <g className="animate-float" style={{ transformOrigin: "200px 200px" }}>
+                <rect x="38" y="80" width="72" height="22" rx="11" fill="#0A0A0A" stroke="#EAB308" strokeWidth="0.5" opacity="0.5" />
+                <text x="74" y="93" textAnchor="middle" fill="#EAB308" opacity="0.6" fontSize="10" fontFamily="monospace" fontWeight="600">Next.js</text>
+              </g>
+              <g className="animate-float-delayed" style={{ transformOrigin: "200px 200px" }}>
+                <rect x="290" y="130" width="62" height="22" rx="11" fill="#0A0A0A" stroke="#EAB308" strokeWidth="0.5" opacity="0.5" />
+                <text x="321" y="143" textAnchor="middle" fill="#EAB308" opacity="0.6" fontSize="10" fontFamily="monospace" fontWeight="600">TypeScript</text>
+              </g>
+              <g className="animate-float" style={{ transformOrigin: "200px 200px", animationDelay: "3s" }}>
+                <rect x="60" y="300" width="52" height="22" rx="11" fill="#0A0A0A" stroke="#EAB308" strokeWidth="0.5" opacity="0.5" />
+                <text x="86" y="313" textAnchor="middle" fill="#EAB308" opacity="0.6" fontSize="10" fontFamily="monospace" fontWeight="600">Backend</text>
+              </g>
+              <g className="animate-float-delayed" style={{ transformOrigin: "200px 200px", animationDelay: "1s" }}>
+                <rect x="305" y="290" width="52" height="22" rx="11" fill="#0A0A0A" stroke="#EAB308" strokeWidth="0.5" opacity="0.5" />
+                <text x="331" y="303" textAnchor="middle" fill="#EAB308" opacity="0.6" fontSize="10" fontFamily="monospace" fontWeight="600">Tailwind</text>
+              </g>
+
+              <g transform="translate(100, 310)">
+                <rect x="0" y="0" width="80" height="50" rx="4" fill="#0A0A0A" fillOpacity="0.9" stroke="#EAB308" strokeWidth="0.5" opacity="0.4" />
+                <circle cx="10" cy="10" r="2.5" fill="#FF5F56" />
+                <circle cx="20" cy="10" r="2.5" fill="#FFBD2E" />
+                <circle cx="30" cy="10" r="2.5" fill="#27C93F" />
+                <text x="10" y="32" fill="#EAB308" opacity="0.7" fontSize="7" fontFamily="monospace" fontWeight="600">
+                  $ npm run build
+                </text>
+                <text x="10" y="42" fill="#27C93F" opacity="0.6" fontSize="7" fontFamily="monospace">
+                  ✓ compiled
+                </text>
+                <rect x="55" y="38" width="4" height="7" rx="1" fill="#EAB308" opacity="0.7" className="animate-blink" />
+              </g>
             </svg>
           </div>
         </div>
