@@ -19,12 +19,12 @@ export default function Navbar() {
           MA
         </a>
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-6 md:flex">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm uppercase tracking-widest text-[#818281] transition-colors hover:text-white"
+                className="text-xs uppercase tracking-widest text-[#818281] transition-colors hover:text-white sm:text-sm"
               >
                 {link.label}
               </a>
@@ -34,10 +34,10 @@ export default function Navbar() {
 
         <a
           href="#contact"
-          className="hidden items-center gap-1 rounded-sm border border-[#EAB308] px-4 py-2 text-sm uppercase tracking-widest text-[#EAB308] transition-colors hover:bg-[#EAB308] hover:text-[#0A0A0A] md:inline-flex"
+          className="hidden items-center gap-1 rounded-sm border border-[#EAB308] px-3 py-1.5 text-xs uppercase tracking-widest text-[#EAB308] transition-colors hover:bg-[#EAB308] hover:text-[#0A0A0A] sm:px-4 sm:py-2 sm:text-sm md:inline-flex"
         >
           Start a Project
-          <span className="text-lg leading-none">&uarr;</span>
+          <span className="text-base leading-none sm:text-lg">&darr;</span>
         </a>
 
         <button
@@ -50,11 +50,23 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {open && (
-        <div className="border-t border-white/10 bg-[#0A0A0A] px-6 pb-6 pt-4 md:hidden">
+      <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out md:hidden ${
+          open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="border-t border-white/10 bg-[#0A0A0A] px-6 pb-6 pt-4">
           <ul className="flex flex-col gap-4">
-            {NAV_LINKS.map((link) => (
-              <li key={link.href}>
+            {NAV_LINKS.map((link, i) => (
+              <li
+                key={link.href}
+                className={`transition-all duration-300 ${
+                  open
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-2 opacity-0"
+                }`}
+                style={{ transitionDelay: `${i * 75}ms` }}
+              >
                 <a
                   href={link.href}
                   onClick={() => setOpen(false)}
@@ -64,19 +76,26 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
-            <li>
+            <li
+              className={`transition-all duration-300 ${
+                open
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-2 opacity-0"
+              }`}
+              style={{ transitionDelay: `${NAV_LINKS.length * 75}ms` }}
+            >
               <a
                 href="#contact"
                 onClick={() => setOpen(false)}
                 className="inline-flex items-center gap-1 rounded-sm border border-[#EAB308] px-4 py-2 text-sm uppercase tracking-widest text-[#EAB308] transition-colors hover:bg-[#EAB308] hover:text-[#0A0A0A]"
               >
                 Start a Project
-                <span className="text-lg leading-none">&uarr;</span>
+                <span className="text-lg leading-none">&darr;</span>
               </a>
             </li>
           </ul>
         </div>
-      )}
+      </div>
     </header>
   );
 }

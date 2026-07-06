@@ -38,7 +38,7 @@ function ServiceCard({
   bullets: string[];
 }) {
   return (
-    <div className="group relative flex flex-col border border-white/10 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#EAB308]/30 hover:shadow-[0_0_30px_rgba(234,179,8,0.08)] md:p-10">
+    <div className="group relative flex flex-col border border-white/10 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#EAB308]/30 hover:shadow-[0_0_30px_rgba(234,179,8,0.08)] sm:p-8 md:p-10">
       <div className="absolute inset-0 bg-gradient-to-b from-[#EAB308]/0 to-[#EAB308]/0 opacity-0 transition-opacity duration-300 group-hover:from-[#EAB308]/[0.02] group-hover:to-[#EAB308]/0 group-hover:opacity-100" />
       <div className="relative flex items-center justify-between">
         <span className="font-mono text-sm text-[#EAB308]/60">{id}</span>
@@ -49,7 +49,7 @@ function ServiceCard({
           </svg>
         </div>
       </div>
-      <h3 className="relative mt-4 font-serif text-3xl font-black leading-tight text-white">
+      <h3 className="relative mt-4 font-serif text-2xl font-black leading-tight text-white sm:text-3xl">
         {title}
       </h3>
       <p className="relative mt-3 text-base leading-relaxed text-[#818281]">
@@ -87,7 +87,7 @@ export default function ServicesSection() {
         <div className="flex items-center gap-4">
           <span className="font-mono text-sm tracking-[0.2em] text-[#EAB308]">02</span>
           <span className="h-px w-8 bg-[#EAB308]/40" />
-          <h2 className="font-serif text-5xl font-black text-white md:text-6xl lg:text-7xl">
+          <h2 className="font-serif text-4xl font-black text-white sm:text-5xl md:text-6xl lg:text-7xl">
             Services
           </h2>
         </div>

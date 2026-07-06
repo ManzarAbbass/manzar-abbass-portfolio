@@ -2,38 +2,37 @@ export default function HeroSection() {
   return (
     <section className="border-b border-white/20">
       <div className="mx-auto flex min-h-screen max-w-6xl flex-col pt-20 md:flex-row md:gap-32 md:pt-24 lg:gap-48">
-        <div className="flex flex-1 flex-col justify-center pl-0 pr-6 pt-24 md:border-r md:border-white/10 md:pr-24 md:pt-0">
+        <div className="flex flex-1 flex-col items-center justify-center px-6 pt-24 text-center md:items-start md:border-r md:border-white/10 md:pr-24 md:pt-0 md:text-left">
           <div className="flex items-center gap-2">
             <span className="h-px w-8 shrink-0 bg-[#EAB308]/40" />
-            <span className="whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-[#EAB308]">
+            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#EAB308] sm:text-xs">
               FullStack Developer<span className="mx-2 text-[#EAB308]/40">●</span>Open to Opportunities
             </span>
           </div>
 
-          <h1 className="mt-6 font-serif text-5xl font-black leading-none tracking-tight [text-shadow:_0_0_1px_#fff,0_0_2px_rgba(255,255,255,0.3)] md:text-7xl lg:text-8xl">
+          <h1 className="mt-6 font-serif text-4xl font-black leading-none tracking-tight [text-shadow:_0_0_1px_#fff,0_0_2px_rgba(255,255,255,0.3)] sm:text-5xl md:text-7xl lg:text-8xl">
             I build{" "}
-            <span className="italic font-black text-[#818281]">software</span>
-            <br />
-            that ships.
+            <span className="italic font-black text-[#818281]">software</span>{" "}
+            that&nbsp;ships.
           </h1>
 
-          <p className="mt-6 max-w-lg text-base leading-relaxed text-[#818281] sm:text-lg">
+          <p className="mt-6 max-w-lg text-base leading-relaxed text-[#818281] sm:text-lg md:text-left">
             Full-stack web apps and SaaS tools built with Next.js,
             TypeScript, and modern databases. Self-taught developer
             focused on clean architecture and shipping fast.
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start sm:gap-4">
             <a
               href="#work"
-              className="inline-flex items-center gap-2 rounded-sm border border-[#EAB308] px-6 py-3 font-mono text-sm uppercase tracking-widest text-[#EAB308] transition-colors hover:bg-[#EAB308] hover:text-[#0A0A0A]"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-sm border border-[#EAB308] px-4 py-2.5 font-mono text-xs uppercase tracking-widest text-[#EAB308] transition-colors hover:bg-[#EAB308] hover:text-[#0A0A0A] sm:w-auto sm:px-6 sm:py-3 sm:text-sm"
             >
               See my work
-              <span className="text-lg leading-none">&uarr;</span>
+              <span className="text-base leading-none sm:text-lg">&darr;</span>
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-sm border border-white/20 px-6 py-3 font-mono text-sm uppercase tracking-widest text-gray-300 transition-colors hover:border-white/50 hover:text-white"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-sm border border-white/20 px-4 py-2.5 font-mono text-xs uppercase tracking-widest text-gray-300 transition-colors hover:border-white/50 hover:text-white sm:w-auto sm:px-6 sm:py-3 sm:text-sm"
             >
               Get in touch
             </a>
