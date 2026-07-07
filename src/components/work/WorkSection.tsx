@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { projects } from "@/data/projects";
 
@@ -60,7 +63,11 @@ export default function WorkSection() {
                     isReversed ? "md:[&>div:first-child]:order-2" : ""
                   }`}
                 >
-                <div className="group relative overflow-hidden border border-white/10 transition-all duration-500 hover:border-[#EAB308]/30 hover:shadow-[0_0_30px_rgba(234,179,8,0.06)]">
+                <motion.div
+                  className="group relative overflow-hidden border border-white/10 transition-colors duration-500 hover:border-[#EAB308]/30"
+                  whileHover={{ y: -4, boxShadow: "0 0 30px rgba(234,179,8,0.06)" }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                >
                   <div className="relative aspect-[4/3] overflow-hidden">
                     {project.image ? (
                       <Image
@@ -95,7 +102,7 @@ export default function WorkSection() {
                       {project.badge}
                     </span>
                   )}
-                </div>
+                </motion.div>
 
                 <div className="flex flex-col justify-center">
                   <div className="flex items-center gap-2">

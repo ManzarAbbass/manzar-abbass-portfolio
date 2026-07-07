@@ -1,16 +1,21 @@
-# Current Feature
+# Current Feature: Add Framer Motion Hover Effect to Work Section Cards
 
 ## Status
 
-<!-- Not Started | In Progress | Completed -->
+In Progress
 
 ## Goals
 
-<!-- Goals and requirements  -->
+- Add Framer Motion `motion.div` hover animations to project cards in WorkSection.tsx
+- Replace CSS-only `transition-all` / `group-hover` on the outer card div with `whileHover` for smoother y-translate, border glow, and shadow effects (same pattern as ServicesSection)
+- Keep inner CSS `group-hover` transitions for child elements (image scale, gradient overlay fade)
 
 ## Notes
 
-<!-- Any extra notes  -->
+- WorkSection currently uses CSS: `transition-all duration-500 hover:border-[#EAB308]/30 hover:shadow-[0_0_30px_rgba(234,179,8,0.06)]`
+- Same approach as recently completed ServicesSection hover — `whileHover` for card-level, CSS `group-hover` for children
+- Will need `"use client"` directive added (not present yet)
+- Two project card divs exist per iteration (image div + content div) — only the outer image card container needs the motion treatment
 
 ## History
 
