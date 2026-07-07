@@ -68,7 +68,7 @@ export default function WorkSection() {
                   whileHover={{ y: -4, boxShadow: "0 0 30px rgba(234,179,8,0.06)" }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
-                  <div className="relative aspect-[4/3] overflow-hidden">
+                  <div className="relative aspect-video overflow-hidden">
                     {project.image ? (
                       <Image
                         src={project.image}
