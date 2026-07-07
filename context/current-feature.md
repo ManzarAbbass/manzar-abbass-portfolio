@@ -1,23 +1,18 @@
-# Current Feature: Add Footer
+# Current Feature
+
+<!-- Feature name and short description  -->
 
 ## Status
 
-In Progress
+<!-- Not Started | In Progress | Completed -->
 
 ## Goals
 
-- Implement footer section at the bottom of the homepage
-- Include copyright notice, navigation links, and social links
-- Match existing dark theme with accent color
-- Responsive and mobile-first layout
-- Add "Back to top" link for usability
+<!-- Goals and requirements  -->
 
 ## Notes
 
-- Section number: 06
-- Footer appears below the contact section on the landing page
-- Keep it minimal — copyright, quick nav links, social links (GitHub, Email)
-- Follow existing patterns from ContactSection and Navbar components
+<!-- Any extra notes  -->
 
 ## History
 
