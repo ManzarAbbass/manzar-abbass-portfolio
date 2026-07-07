@@ -1,22 +1,16 @@
-# Current Feature: Add fade-in-up scroll animation to HeroSection
+# Current Feature
 
 ## Status
 
-In Progress
+<!-- Not Started | In Progress | Completed -->
 
 ## Goals
 
-- Add `"use client"` directive to HeroSection.tsx
-- Wrap left and right columns with `motion.div`
-- Use `whileInView` for fade-in-up animation on scroll
-- Use `viewport={{ once: true }}` so animation only plays once
-- Add staggered delay (0.2s) on right column
+<!-- Goals and requirements  -->
 
 ## Notes
 
-- Framer Motion already installed at ^12.42.2
-- Verified: TypeScript compiles clean
-- Build needs verification
+<!-- Any extra notes  -->
 
 ## History
 
@@ -30,4 +24,5 @@ In Progress
 - 2026-07-07: Quick wins — lazy loading on below-fold image, error boundary (error.tsx), aria-hidden on decorative SVG, aria-label on image placeholder, 404 page metadata
 - 2026-07-07: Implemented contact section (Section 5) with two-column layout (intro/contact info left, form right), "What I'm open to" box replacing rates table, form fields (Name, Email, Project Details), and solid-accent submit button
 - 2026-07-08: Implemented footer section with copyright, navigation links, social links, and "Back to top" link
+- 2026-07-08: Added fade-in-up scroll animation to HeroSection using Framer Motion whileInView
 
