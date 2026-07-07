@@ -67,6 +67,7 @@ export default function WorkSection() {
                         src={project.image}
                         alt={project.name}
                         fill
+                        loading="eager"
                         className="object-cover transition-all duration-700 group-hover:scale-105"
                         sizes="(max-width: 768px) 100vw, 50vw"
                       />
