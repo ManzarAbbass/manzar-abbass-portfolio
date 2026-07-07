@@ -148,7 +148,7 @@ export default function ContactSection() {
                 <motion.div variants={fieldVariants}>
                   <motion.button
                     type="submit"
-                    className="inline-flex w-full items-center justify-center gap-2 rounded-sm border border-[#EAB308] bg-[#EAB308] px-4 py-3 font-mono text-xs font-bold uppercase tracking-widest text-[#0A0A0A] transition-colors hover:bg-[#EAB308]/90 sm:w-auto sm:px-8 sm:py-3 sm:text-sm"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-sm border border-[#EAB308] bg-[#EAB308] px-4 py-3 font-mono text-xs font-bold uppercase tracking-widest text-[#0A0A0A] transition-colors hover:bg-[#EAB308]/90 sm:px-8 sm:py-3 sm:text-sm"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     transition={{ type: "spring", stiffness: 400, damping: 20 }}
