@@ -1,20 +1,16 @@
-# Current Feature: Add Hover Effect on Service Cards
+# Current Feature
 
 ## Status
 
-In Progress
+<!-- Not Started | In Progress | Completed -->
 
 ## Goals
 
-- Add Framer Motion `motion.div` hover animations to service cards in ServicesSection.tsx
-- Replace or augment existing CSS hover transitions with Framer Motion's `whileHover` for smoother, more expressive effects
-- Maintain visual consistency with the existing design (border color, shadow, translate-Y effects)
+<!-- Goals and requirements  -->
 
 ## Notes
 
-- framer-motion is already a dependency and used in HeroSection.tsx
-- Current hover uses CSS transitions (group/hover utilities) — consider layering Framer Motion on top or replacing gradually
-- `whileHover` with `scale`, `y`, `boxShadow`, and `borderColor` transitions would match the current aesthetic
+<!-- Any extra notes  -->
 
 ## History
 
@@ -29,4 +25,5 @@ In Progress
 - 2026-07-07: Implemented contact section (Section 5) with two-column layout (intro/contact info left, form right), "What I'm open to" box replacing rates table, form fields (Name, Email, Project Details), and solid-accent submit button
 - 2026-07-08: Implemented footer section with copyright, navigation links, social links, and "Back to top" link
 - 2026-07-08: Added fade-in-up scroll animation to HeroSection using Framer Motion whileInView
+- 2026-07-08: Added Framer Motion spring hover effect to service cards — replaced CSS hover transitions with `whileHover` for smooth y-translate, border color, and box shadow animation
 
