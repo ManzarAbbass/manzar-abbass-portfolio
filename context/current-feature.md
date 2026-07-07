@@ -1,22 +1,16 @@
-# Current Feature: Animate Process Section with Framer Motion
+# Current Feature
 
 ## Status
 
-In Progress
+<!-- Not Started | In Progress | Completed -->
 
 ## Goals
 
-- Add staggered scroll-triggered entrance animation to ProcessSection cards (whileInView)
-- Add spring hover effect on step cards (whileHover) matching Services/Work pattern
-- Make step numbers more prominent as a visual anchor
-- Stay consistent with the flat/minimal design spec (no icons)
-- Build must pass
+<!-- Goals and requirements  -->
 
 ## Notes
 
-- User wants to improve the "How it Works" (Process) section visually
-- Context7 confirmed whileInView + staggerChildren + whileHover approach
-- Implementation already done — needs verification
+<!-- Any extra notes  -->
 
 ## History
 
@@ -33,4 +27,5 @@ In Progress
 - 2026-07-08: Added fade-in-up scroll animation to HeroSection using Framer Motion whileInView
 - 2026-07-08: Added Framer Motion spring hover effect to service cards — replaced CSS hover transitions with `whileHover` for smooth y-translate, border color, and box shadow animation
 - 2026-07-08: Added Framer Motion spring hover effect to work section project cards — same pattern as services (whileHover with y, boxShadow, spring transition, border via CSS)
+- 2026-07-08: Added staggered scroll-triggered entrance animation and spring hover to ProcessSection (How it Works), made step numbers more prominent, fixed font preload warnings
 
