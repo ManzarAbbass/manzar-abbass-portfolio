@@ -1,8 +1,18 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function HeroSection() {
   return (
     <section className="border-b border-white/20">
       <div className="mx-auto flex min-h-screen max-w-6xl flex-col pt-20 md:flex-row md:gap-32 md:pt-24 lg:gap-48">
-        <div className="flex flex-1 flex-col items-center justify-center px-6 pt-24 text-center md:items-start md:border-r md:border-white/10 md:pr-24 md:pt-0 md:text-left">
+        <motion.div
+          className="flex flex-1 flex-col items-center justify-center px-6 pt-24 text-center md:items-start md:border-r md:border-white/10 md:pr-24 md:pt-0 md:text-left"
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <div className="flex items-center gap-2">
             <span className="h-px w-8 shrink-0 bg-[#EAB308]/40" />
             <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#EAB308] sm:text-xs">
@@ -37,9 +47,15 @@ export default function HeroSection() {
               Get in touch
             </a>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="flex flex-1 items-center justify-center px-6 pb-16 pt-16 md:pb-0 md:pt-0">
+        <motion.div
+          className="flex flex-1 items-center justify-center px-6 pb-16 pt-16 md:pb-0 md:pt-0"
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+        >
           <div className="relative aspect-square w-full max-w-md">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#EAB308]/10 via-transparent to-[#EAB308]/5 blur-3xl animate-orb-pulse" />
 
@@ -137,7 +153,7 @@ export default function HeroSection() {
               </g>
             </svg>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

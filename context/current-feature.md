@@ -1,18 +1,22 @@
-# Current Feature
-
-<!-- Feature name and short description  -->
+# Current Feature: Add fade-in-up scroll animation to HeroSection
 
 ## Status
 
-<!-- Not Started | In Progress | Completed -->
+In Progress
 
 ## Goals
 
-<!-- Goals and requirements  -->
+- Add `"use client"` directive to HeroSection.tsx
+- Wrap left and right columns with `motion.div`
+- Use `whileInView` for fade-in-up animation on scroll
+- Use `viewport={{ once: true }}` so animation only plays once
+- Add staggered delay (0.2s) on right column
 
 ## Notes
 
-<!-- Any extra notes  -->
+- Framer Motion already installed at ^12.42.2
+- Verified: TypeScript compiles clean
+- Build needs verification
 
 ## History
 
