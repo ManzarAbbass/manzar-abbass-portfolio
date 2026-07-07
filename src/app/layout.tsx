@@ -7,12 +7,14 @@ const serif = Playfair_Display({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-serif",
+  preload: false,
 });
 
 const mono = JetBrains_Mono({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-mono",
+  preload: false,
 });
 
 export const metadata: Metadata = {

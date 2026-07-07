@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 const steps = [
   {
     id: "01",
@@ -25,6 +29,24 @@ const steps = [
   },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" as const },
+  },
+};
+
 export default function ProcessSection() {
   return (
     <section id="process" className="relative border-b border-white/20">
@@ -42,22 +64,33 @@ export default function ProcessSection() {
         </div>
         <hr className="mt-4 border-0 h-px bg-gradient-to-r from-white/10 via-[#EAB308]/30 to-white/10" />
 
-        <div className="relative mt-16 grid grid-cols-1 md:grid-cols-4">
+        <motion.div
+          className="relative mt-16 grid grid-cols-1 md:grid-cols-4"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
           {steps.map((step) => (
-            <div
+            <motion.div
               key={step.id}
+              variants={cardVariants}
               className="border-b border-white/10 p-6 last:border-b-0 md:border-b-0 md:border-r md:border-white/10 md:p-8 md:last:border-r-0"
+              whileHover={{ y: -4, boxShadow: "0 0 30px rgba(234,179,8,0.06)" }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
-              <span className="font-mono text-sm text-[#EAB308]">{step.id}</span>
-              <h3 className="mt-3 font-serif text-xl font-black leading-tight text-white sm:text-2xl">
+              <span className="font-mono text-5xl font-black text-[#EAB308]/10 md:text-6xl">
+                {step.id}
+              </span>
+              <h3 className="mt-1 font-serif text-xl font-black leading-tight text-white sm:text-2xl">
                 {step.title}
               </h3>
               <p className="mt-3 text-base leading-relaxed text-[#818281]">
                 {step.description}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

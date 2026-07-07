@@ -1,16 +1,22 @@
-# Current Feature
+# Current Feature: Animate Process Section with Framer Motion
 
 ## Status
 
-<!-- Not Started | In Progress | Completed -->
+In Progress
 
 ## Goals
 
-<!-- Goals and requirements  -->
+- Add staggered scroll-triggered entrance animation to ProcessSection cards (whileInView)
+- Add spring hover effect on step cards (whileHover) matching Services/Work pattern
+- Make step numbers more prominent as a visual anchor
+- Stay consistent with the flat/minimal design spec (no icons)
+- Build must pass
 
 ## Notes
 
-<!-- Any extra notes  -->
+- User wants to improve the "How it Works" (Process) section visually
+- Context7 confirmed whileInView + staggerChildren + whileHover approach
+- Implementation already done — needs verification
 
 ## History
 
