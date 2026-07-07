@@ -1,14 +1,16 @@
 # Current Feature
 
-<!-- Feature name and short description  -->
+Style "View Live" and "Source Code" links as buttons matching hero section button design
 
 ## Status
 
-<!-- Not Started | In Progress | Completed -->
+In Progress
 
 ## Goals
 
-<!-- Goals and requirements  -->
+- Add "View Live" and "Source Code" as styled buttons in work section project cards
+- Match the hero section button design (border, padding, hover effects)
+- "View Live" uses gold border (like "See my work"), "Source Code" uses white border (like "Get in touch")
 
 ## Notes
 

@@ -148,7 +148,7 @@ export default function WorkSection() {
                         href={project.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-widest text-[#818281] transition-colors hover:text-[#EAB308]"
+                        className="inline-flex w-full items-center justify-center gap-2 rounded-sm border border-[#EAB308] px-4 py-2.5 font-mono text-xs uppercase tracking-widest text-[#EAB308] transition-colors hover:bg-[#EAB308] hover:text-[#0A0A0A] sm:w-auto"
                       >
                         View Live
                         <ExternalLinkIcon />
@@ -159,7 +159,7 @@ export default function WorkSection() {
                         href={project.repo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-widest text-[#818281] transition-colors hover:text-[#EAB308]"
+                        className="inline-flex w-full items-center justify-center gap-2 rounded-sm border border-white/20 px-4 py-2.5 font-mono text-xs uppercase tracking-widest text-gray-300 transition-colors hover:border-white/50 hover:text-white sm:w-auto"
                       >
                         Source Code
                         <GitHubIcon />
