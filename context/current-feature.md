@@ -1,16 +1,22 @@
-# Current Feature
+# Current Feature: Animate Contact Section with Framer Motion
 
 ## Status
 
-<!-- Not Started | In Progress | Completed -->
+In Progress
 
 ## Goals
 
-<!-- Goals and requirements  -->
+- Add staggered scroll-triggered entrance animation to Contact section (whileInView with staggerChildren) — left column and right column fade/slide in on scroll
+- Add spring hover lift on "What I'm open to" box (whileHover with y: -4 + boxShadow) matching Services/Process pattern
+- Add staggered entrance for form fields — each field animates in sequentially (name → email → message → button)
+- Add spring hover scale effect on submit button (whileHover with scale: 1.02) — primary CTA
+- Build must pass
 
 ## Notes
 
-<!-- Any extra notes  -->
+- User asked for most visually attractive improvements to Contact section
+- Contact section currently has "use client" but zero Framer Motion animations
+- All animations should match existing patterns in Hero/Services/Work/Process sections
 
 ## History
 

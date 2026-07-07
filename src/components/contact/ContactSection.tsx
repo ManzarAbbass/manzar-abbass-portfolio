@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 const openToItems = [
@@ -7,6 +8,42 @@ const openToItems = [
   "Collaboration — open-source or joint builds",
   "Feedback — code review or architecture advice",
 ];
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const columnVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" as const },
+  },
+};
+
+const formVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const fieldVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: "easeOut" as const },
+  },
+};
 
 export default function ContactSection() {
   return (
@@ -25,8 +62,14 @@ export default function ContactSection() {
         </div>
         <hr className="mt-4 border-0 h-px bg-gradient-to-r from-white/10 via-[#EAB308]/30 to-white/10" />
 
-        <div className="mt-16 grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16 lg:gap-24">
-          <div className="flex flex-col gap-8">
+        <motion.div
+          className="mt-16 grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16 lg:gap-24"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <motion.div variants={columnVariants} className="flex flex-col gap-8">
             <div>
               <p className="text-lg leading-relaxed text-[#818281]">
                 Have a project in mind or just want to say hi? Tell me about
@@ -39,7 +82,11 @@ export default function ContactSection() {
               <InfoRow label="GitHub" value="github.com/ManzarAbbass" href="https://github.com/ManzarAbbass" />
             </div>
 
-            <div className="border border-white/10 p-6">
+            <motion.div
+              className="border border-white/10 p-6"
+              whileHover={{ y: -4, boxShadow: "0 0 30px rgba(234,179,8,0.06)" }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            >
               <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#EAB308]">
                 What I&apos;m open to
               </span>
@@ -51,50 +98,69 @@ export default function ContactSection() {
                   </li>
                 ))}
               </ul>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          <div>
+          <motion.div variants={columnVariants}>
             <form
               onSubmit={(e) => e.preventDefault()}
               className="flex flex-col gap-5"
             >
-              <FormField
-                label="Your Name"
-                id="name"
-                type="text"
-                placeholder="e.g. Sarah Chen"
-              />
-              <FormField
-                label="Email Address"
-                id="email"
-                type="email"
-                placeholder="e.g. sarah@example.com"
-              />
-              <div className="flex flex-col gap-2">
-                <label
-                  htmlFor="message"
-                  className="font-mono text-xs uppercase tracking-widest text-[#818281]"
-                >
-                  Project / Message Details
-                </label>
-                <textarea
-                  id="message"
-                  rows={5}
-                  placeholder="Tell me about your project, timeline, and any specific requirements..."
-                  className="w-full border border-white/10 bg-white/5 px-4 py-3 font-mono text-sm text-white placeholder-[#818281] outline-none transition-colors focus:border-[#EAB308]/50 focus:bg-white/[0.07]"
-                />
-              </div>
-              <button
-                type="submit"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-sm border border-[#EAB308] bg-[#EAB308] px-4 py-3 font-mono text-xs font-bold uppercase tracking-widest text-[#0A0A0A] transition-colors hover:bg-[#EAB308]/90 sm:w-auto sm:px-8 sm:py-3 sm:text-sm"
+              <motion.div
+                variants={formVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="flex flex-col gap-5"
               >
-                Send Message
-                <span className="text-base leading-none sm:text-lg">&rarr;</span>
-              </button>
+                <motion.div variants={fieldVariants}>
+                  <FormField
+                    label="Your Name"
+                    id="name"
+                    type="text"
+                    placeholder="e.g. Sarah Chen"
+                  />
+                </motion.div>
+                <motion.div variants={fieldVariants}>
+                  <FormField
+                    label="Email Address"
+                    id="email"
+                    type="email"
+                    placeholder="e.g. sarah@example.com"
+                  />
+                </motion.div>
+                <motion.div variants={fieldVariants}>
+                  <div className="flex flex-col gap-2">
+                    <label
+                      htmlFor="message"
+                      className="font-mono text-xs uppercase tracking-widest text-[#818281]"
+                    >
+                      Project / Message Details
+                    </label>
+                    <textarea
+                      id="message"
+                      rows={5}
+                      placeholder="Tell me about your project, timeline, and any specific requirements..."
+                      className="w-full border border-white/10 bg-white/5 px-4 py-3 font-mono text-sm text-white placeholder-[#818281] outline-none transition-colors focus:border-[#EAB308]/50 focus:bg-white/[0.07]"
+                    />
+                  </div>
+                </motion.div>
+                <motion.div variants={fieldVariants}>
+                  <motion.button
+                    type="submit"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-sm border border-[#EAB308] bg-[#EAB308] px-4 py-3 font-mono text-xs font-bold uppercase tracking-widest text-[#0A0A0A] transition-colors hover:bg-[#EAB308]/90 sm:w-auto sm:px-8 sm:py-3 sm:text-sm"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                  >
+                    Send Message
+                    <span className="text-base leading-none sm:text-lg">&rarr;</span>
+                  </motion.button>
+                </motion.div>
+              </motion.div>
             </form>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
