@@ -1,18 +1,23 @@
-# Current Feature
+# Current Feature: Quick Wins — Performance, Accessibility & Error Handling
 
-<!-- Feature name and short description  -->
+<!-- Fixing 5 low-risk issues from codebase scan: loading lazy, error boundary, aria-hidden, aria-label, 404 metadata -->
 
 ## Status
 
-<!-- Not Started | In Progress | Completed -->
+In Progress
 
 ## Goals
 
-<!-- Goals and requirements  -->
+- [ ] Change `loading="eager"` to `loading="lazy"` on below-fold image in `WorkSection.tsx:70`
+- [ ] Create `src/app/error.tsx` with a fallback UI and `"use client"` directive
+- [ ] Add `aria-hidden="true"` to decorative SVG in `HeroSection.tsx:48`
+- [ ] Add `aria-label` and `role="img"` to project image placeholder in `WorkSection.tsx:78`
+- [ ] Add `export const metadata = { title: "404 — Page Not Found" }` to `not-found.tsx`
 
 ## Notes
 
-<!-- Any extra notes -->
+- Picked from codebase scan results as quick wins (low risk, high impact)
+- Items skipped for now: raw hex→tokens (#1), #contact anchor (#3), WebP conversion (#6), extract SVG (#7), shared icons (#8), useStagger hook (#10)
 
 ## History
 

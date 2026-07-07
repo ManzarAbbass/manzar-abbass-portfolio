@@ -50,6 +50,7 @@ export default function HeroSection() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               className="relative h-full w-full"
+              aria-hidden="true"
             >
               <defs>
                 <radialGradient id="orb-glow" cx="50%" cy="50%" r="50%">

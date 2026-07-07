@@ -67,14 +67,14 @@ export default function WorkSection() {
                         src={project.image}
                         alt={project.name}
                         fill
-                        loading="eager"
+                        loading="lazy"
                         className="object-cover transition-all duration-700 group-hover:scale-105"
                         sizes="(max-width: 768px) 100vw, 50vw"
                       />
                     ) : (
                       <>
                         <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#0A0A0A]" />
-                        <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="absolute inset-0 flex items-center justify-center" role="img" aria-label={`${project.name} project image placeholder`}>
                           <span className="font-serif text-5xl font-black text-white/10 sm:text-6xl md:text-7xl">
                             {project.name}
                           </span>
