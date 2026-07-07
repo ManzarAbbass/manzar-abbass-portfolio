@@ -35,7 +35,7 @@ export default function ContactSection() {
             </div>
 
             <div className="space-y-4">
-              <InfoRow label="Email" value="manzarabbass@example.com" href="mailto:manzarabbass@example.com" />
+              <InfoRow label="Email" value="manzarja32@gmail.com" href="mailto:manzarja32@gmail.com" />
               <InfoRow label="GitHub" value="github.com/ManzarAbbass" href="https://github.com/ManzarAbbass" />
             </div>
 
