@@ -78,7 +78,7 @@ function ServiceCard({
 
 export default function ServicesSection() {
   return (
-    <section className="relative border-b border-white/20">
+    <section id="services" className="relative border-b border-white/20">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -left-40 -top-40 h-80 w-80 rounded-full bg-[#EAB308]/5 blur-3xl" />
         <div className="absolute -bottom-40 -right-40 h-80 w-80 rounded-full bg-[#EAB308]/5 blur-3xl" />
