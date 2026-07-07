@@ -91,7 +91,7 @@ export default function ServicesSection() {
             Services
           </h2>
         </div>
-        <hr className="mt-4 border-white/10" />
+        <hr className="mt-4 border-0 h-px bg-gradient-to-r from-white/10 via-[#EAB308]/30 to-white/10" />
 
         <div className="relative mt-16 grid grid-cols-1 md:grid-cols-2">
           {services.map((service) => (
