@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 const services = [
   {
     id: "01",
@@ -38,7 +42,11 @@ function ServiceCard({
   bullets: string[];
 }) {
   return (
-    <div className="group relative flex flex-col border border-white/10 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#EAB308]/30 hover:shadow-[0_0_30px_rgba(234,179,8,0.08)] sm:p-8 md:p-10">
+    <motion.div
+      className="group relative flex flex-col border border-white/10 p-6 transition-colors duration-300 hover:border-[#EAB308]/30 sm:p-8 md:p-10"
+      whileHover={{ y: -4, boxShadow: "0 0 30px rgba(234,179,8,0.08)" }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+    >
       <div className="absolute inset-0 bg-gradient-to-b from-[#EAB308]/0 to-[#EAB308]/0 opacity-0 transition-opacity duration-300 group-hover:from-[#EAB308]/[0.02] group-hover:to-[#EAB308]/0 group-hover:opacity-100" />
       <div className="relative flex items-center justify-between">
         <span className="font-mono text-sm text-[#EAB308]/60">{id}</span>
@@ -72,7 +80,7 @@ function ServiceCard({
           </li>
         ))}
       </ul>
-    </div>
+    </motion.div>
   );
 }
 

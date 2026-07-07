@@ -1,16 +1,20 @@
-# Current Feature
+# Current Feature: Add Hover Effect on Service Cards
 
 ## Status
 
-<!-- Not Started | In Progress | Completed -->
+In Progress
 
 ## Goals
 
-<!-- Goals and requirements  -->
+- Add Framer Motion `motion.div` hover animations to service cards in ServicesSection.tsx
+- Replace or augment existing CSS hover transitions with Framer Motion's `whileHover` for smoother, more expressive effects
+- Maintain visual consistency with the existing design (border color, shadow, translate-Y effects)
 
 ## Notes
 
-<!-- Any extra notes  -->
+- framer-motion is already a dependency and used in HeroSection.tsx
+- Current hover uses CSS transitions (group/hover utilities) — consider layering Framer Motion on top or replacing gradually
+- `whileHover` with `scale`, `y`, `boxShadow`, and `borderColor` transitions would match the current aesthetic
 
 ## History
 
