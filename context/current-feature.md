@@ -1,16 +1,14 @@
 # Current Feature
 
-Style "View Live" and "Source Code" links as buttons matching hero section button design
+<!-- Feature name and short description  -->
 
 ## Status
 
-In Progress
+<!-- Not Started | In Progress | Completed -->
 
 ## Goals
 
-- Add "View Live" and "Source Code" as styled buttons in work section project cards
-- Match the hero section button design (border, padding, hover effects)
-- "View Live" uses gold border (like "See my work"), "Source Code" uses white border (like "Get in touch")
+<!-- Goals and requirements  -->
 
 ## Notes
 
@@ -23,4 +21,5 @@ In Progress
 - 2026-07-05: Implemented services section (Section 2) with Full-Stack Web Applications and MVP Builds cards
 - 2026-07-06: Fixed responsiveness on small devices — scaled headings, badges, buttons, card padding, centered hero text on mobile, fixed heading line break on desktop, and added hamburger menu animation
 - 2026-07-07: Implemented selected work section (Section 3) with DevStash project entry, alternating two-column layout, screenshot with verifiable badge, tech stack tags, and polished hover animations
+- 2026-07-07: Styled View Live and Source Code links as buttons matching hero section button design, with responsive sizing for mobile
 
