@@ -1,18 +1,25 @@
-# Current Feature
-
-<!-- Feature name and short description  -->
+# Current Feature: Portfolio Contact Section (Section 5)
 
 ## Status
 
-<!-- Not Started | In Progress | Completed -->
+In Progress
 
 ## Goals
 
-<!-- Goals and requirements  -->
+- Two-column layout: left = intro text + contact info, right = contact form
+- Contact info: real GitHub link (github.com/ManzarAbbass), real email
+- Replace rates table with "What I'm open to" list (small paid projects, collaboration, feedback) — omit Budget Range field since rates section is not included
+- Form fields: Name, Email, Project/Message details
+- Submit button: solid accent-color fill, consistent with rest of site's CTA styling
+- Section header with index "05" + serif heading + horizontal rule, matching rest of site pattern (using HeadingSection component)
 
 ## Notes
 
-<!-- Any extra notes -->
+- Reference design in @context/portfolioui/contact.md for layout inspo only
+- Do NOT copy rates table or response-time promise as-is
+- Form is client-side only for now (no backend handler) — static markup
+- Use existing HeadingSection, Button components where possible
+- Mobile-first layout: two columns stack on small screens
 
 ## History
 
