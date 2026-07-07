@@ -1,16 +1,24 @@
-# Current Feature
+# Current Feature: Animate Footer and Navbar with Framer Motion
 
 ## Status
 
-<!-- Not Started | In Progress | Completed -->
+In Progress
 
 ## Goals
 
-<!-- Goals and requirements  -->
+- Add scroll-triggered fade-in-up entrance animation to FooterSection (whileInView with staggerChildren)
+- Add staggered column entrance for Navigation and Connect columns in footer
+- Add hover slide effect on footer nav links (translate-x on hover)
+- Add staggered entrance animation for navbar links on page load
+- Add spring hover scale effect on "Start a Project" button in navbar (matching Contact button pattern)
+- Add AnimatePresence for mobile hamburger menu in navbar
+- Build must pass
 
 ## Notes
 
-<!-- Any extra notes  -->
+- Footer is currently a server component — needs "use client" added for Framer Motion
+- Navbar already has "use client" and CSS-based hamburger animation — upgrade to Framer Motion AnimatePresence
+- All animations should match existing patterns in other sections
 
 ## History
 

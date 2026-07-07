@@ -19,7 +19,7 @@ export const projects: Project[] = [
       "Supabase",
       "OpenRouter",
     ],
-    image: "/Devstash.PNG",
+    image: "/Devstash.webp",
     href: "https://devstash.vercel.app",
     repo: "https://github.com/ManzarAbbass/devstash",
     badge: "Live on Vercel",
