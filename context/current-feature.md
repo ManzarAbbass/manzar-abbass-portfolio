@@ -1,25 +1,18 @@
-# Current Feature: Portfolio Contact Section (Section 5)
+# Current Feature
+
+<!-- Feature name and short description  -->
 
 ## Status
 
-In Progress
+<!-- Not Started | In Progress | Completed -->
 
 ## Goals
 
-- Two-column layout: left = intro text + contact info, right = contact form
-- Contact info: real GitHub link (github.com/ManzarAbbass), real email
-- Replace rates table with "What I'm open to" list (small paid projects, collaboration, feedback) — omit Budget Range field since rates section is not included
-- Form fields: Name, Email, Project/Message details
-- Submit button: solid accent-color fill, consistent with rest of site's CTA styling
-- Section header with index "05" + serif heading + horizontal rule, matching rest of site pattern (using HeadingSection component)
+<!-- Goals and requirements  -->
 
 ## Notes
 
-- Reference design in @context/portfolioui/contact.md for layout inspo only
-- Do NOT copy rates table or response-time promise as-is
-- Form is client-side only for now (no backend handler) — static markup
-- Use existing HeadingSection, Button components where possible
-- Mobile-first layout: two columns stack on small screens
+<!-- Any extra notes -->
 
 ## History
 
@@ -31,4 +24,5 @@ In Progress
 - 2026-07-07: Styled View Live and Source Code links as buttons matching hero section button design, with responsive sizing for mobile
 - 2026-07-07: Implemented process section (Section 4) with 4-column freelance "How It Works" layout (Discovery Call, Proposal & Scope, Weekly Check-ins, Handoff & Support). Wired all sections (Services, Work, Process) into home page with anchor navigation via Navbar.
 - 2026-07-07: Quick wins — lazy loading on below-fold image, error boundary (error.tsx), aria-hidden on decorative SVG, aria-label on image placeholder, 404 page metadata
+- 2026-07-07: Implemented contact section (Section 5) with two-column layout (intro/contact info left, form right), "What I'm open to" box replacing rates table, form fields (Name, Email, Project Details), and solid-accent submit button
 
