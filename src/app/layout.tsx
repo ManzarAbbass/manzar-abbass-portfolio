@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, JetBrains_Mono } from "next/font/google";
+import Navbar from "@/components/navbar/Navbar";
 import "./globals.css";
 
 const serif = Playfair_Display({
@@ -28,7 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${serif.variable} ${mono.variable}`}>
-      <body className="font-mono antialiased">{children}</body>
+      <body className="font-mono antialiased">
+        <Navbar />
+        <main>{children}</main>
+      </body>
     </html>
   );
 }

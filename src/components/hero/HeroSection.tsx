@@ -24,14 +24,14 @@ export default function HeroSection() {
 
           <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start sm:gap-4">
             <a
-              href="#work"
+              href="/work"
               className="inline-flex w-full items-center justify-center gap-2 rounded-sm border border-[#EAB308] px-4 py-2.5 font-mono text-xs uppercase tracking-widest text-[#EAB308] transition-colors hover:bg-[#EAB308] hover:text-[#0A0A0A] sm:w-auto sm:px-6 sm:py-3 sm:text-sm"
             >
               See my work
               <span className="text-base leading-none sm:text-lg">&darr;</span>
             </a>
             <a
-              href="#contact"
+              href="/#contact"
               className="inline-flex w-full items-center justify-center gap-2 rounded-sm border border-white/20 px-4 py-2.5 font-mono text-xs uppercase tracking-widest text-gray-300 transition-colors hover:border-white/50 hover:text-white sm:w-auto sm:px-6 sm:py-3 sm:text-sm"
             >
               Get in touch
