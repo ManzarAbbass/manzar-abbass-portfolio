@@ -1,7 +1,10 @@
 "use client";
 
+import { useActionState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { toast } from "sonner";
+import { sendContactMessage, type ContactState } from "@/actions/contact";
 
 const openToItems = [
   "Small paid projects — MVPs, landing pages, or feature work",
@@ -45,7 +48,21 @@ const fieldVariants = {
   },
 };
 
+const initialState: ContactState = { success: false };
+
 export default function ContactSection() {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [state, formAction] = useActionState(sendContactMessage, initialState);
+
+  useEffect(() => {
+    if (state.success) {
+      toast.success("Message sent successfully!");
+      formRef.current?.reset();
+    } else if (state.error) {
+      toast.error(state.error);
+    }
+  }, [state]);
+
   return (
     <section id="contact" className="relative border-b border-white/20">
       <div className="absolute inset-0 overflow-hidden">
@@ -103,7 +120,8 @@ export default function ContactSection() {
 
           <motion.div variants={columnVariants}>
             <form
-              onSubmit={(e) => e.preventDefault()}
+              ref={formRef}
+              action={formAction}
               className="flex flex-col gap-5"
             >
               <motion.div
@@ -117,6 +135,7 @@ export default function ContactSection() {
                   <FormField
                     label="Your Name"
                     id="name"
+                    name="name"
                     type="text"
                     placeholder="e.g. Sarah Chen"
                   />
@@ -125,6 +144,7 @@ export default function ContactSection() {
                   <FormField
                     label="Email Address"
                     id="email"
+                    name="email"
                     type="email"
                     placeholder="e.g. sarah@example.com"
                   />
@@ -139,6 +159,7 @@ export default function ContactSection() {
                     </label>
                     <textarea
                       id="message"
+                      name="message"
                       rows={5}
                       placeholder="Tell me about your project, timeline, and any specific requirements..."
                       className="w-full border border-white/10 bg-white/5 px-4 py-3 font-mono text-sm text-white placeholder-[#818281] outline-none transition-colors focus:border-[#EAB308]/50 focus:bg-white/[0.07]"
@@ -195,11 +216,13 @@ function InfoRow({
 function FormField({
   label,
   id,
+  name,
   type,
   placeholder,
 }: {
   label: string;
   id: string;
+  name: string;
   type: string;
   placeholder: string;
 }) {
@@ -213,6 +236,7 @@ function FormField({
       </label>
       <input
         id={id}
+        name={name}
         type={type}
         placeholder={placeholder}
         className="w-full border border-white/10 bg-white/5 px-4 py-3 font-mono text-sm text-white placeholder-[#818281] outline-none transition-colors focus:border-[#EAB308]/50 focus:bg-white/[0.07]"

@@ -1,16 +1,24 @@
-# Current Feature
+# Current Feature: Make Contact Form Functional with Resend
 
 ## Status
 
-<!-- Not Started | In Progress | Completed -->
+In Progress
 
 ## Goals
 
-<!-- Goals and requirements  -->
+- Install resend package
+- Create server action in src/actions/contact.ts with Zod validation and Resend API
+- Connect server action to contact form in ContactSection.tsx
+- On success: show green toast "Message sent successfully!"
+- On error: show red toast "Something went wrong. Try again."
+- Reset form after successful submission
 
 ## Notes
 
-<!-- Any extra notes  -->
+- From: onboarding@resend.dev
+- To: manzarja32@gmail.com
+- Subject: "New Portfolio Message from [name]"
+- Email body should include name, email, and message
 
 ## History
 

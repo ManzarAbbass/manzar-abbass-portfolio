@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, JetBrains_Mono } from "next/font/google";
 import Navbar from "@/components/navbar/Navbar";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 const serif = Playfair_Display({
@@ -34,6 +35,19 @@ export default function RootLayout({
       <body className="font-mono antialiased">
         <Navbar />
         <main>{children}</main>
+        <Toaster
+          position="bottom-right"
+          theme="dark"
+          toastOptions={{
+            style: {
+              background: "#0A0A0A",
+              border: "1px solid rgba(234,179,8,0.3)",
+              color: "#fff",
+              fontFamily: "var(--font-mono), monospace",
+              fontSize: "13px",
+            },
+          }}
+        />
       </body>
     </html>
   );
