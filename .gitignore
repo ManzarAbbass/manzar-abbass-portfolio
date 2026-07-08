@@ -38,6 +38,10 @@ yarn-error.log*
 
 # opencode
 opencode.json
+.opencode/
+
+# project context / ai guidelines
+context/
 
 # typescript
 *.tsbuildinfo
