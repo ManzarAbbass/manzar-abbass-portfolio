@@ -4,7 +4,8 @@ import { useActionState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { toast } from "sonner";
-import { sendContactMessage, type ContactState } from "@/actions/contact";
+import { sendContactMessage } from "@/actions/contact";
+import type { ContactState } from "@/lib/contact-schema";
 
 const openToItems = [
   "Small paid projects — MVPs, landing pages, or feature work",

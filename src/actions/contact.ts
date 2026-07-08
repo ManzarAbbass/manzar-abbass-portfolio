@@ -2,26 +2,13 @@
 
 import { Resend } from "resend";
 import { z } from "zod";
+import { ContactSchema, type ContactState } from "@/lib/contact-schema";
 
 function getResend() {
   return new Resend(process.env.RESEND_API_KEY);
 }
 
-export const ContactSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters").max(100),
-  email: z.string().email("Invalid email address"),
-  message: z
-    .string()
-    .min(20, "Message must be at least 20 characters")
-    .max(5000),
-});
-
 type ContactInput = z.infer<typeof ContactSchema>;
-
-export type ContactState = {
-  success: boolean;
-  error?: string;
-};
 
 export async function sendContactMessage(
   _prevState: ContactState,
