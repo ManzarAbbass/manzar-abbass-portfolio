@@ -33,18 +33,18 @@ export default function WorkSection() {
   return (
     <section id="work" className="relative border-b border-white/20">
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -left-40 -top-40 h-80 w-80 rounded-full bg-[#EAB308]/5 blur-3xl" />
-        <div className="absolute -bottom-40 -right-40 h-80 w-80 rounded-full bg-[#EAB308]/5 blur-3xl" />
+        <div className="absolute -left-40 -top-40 h-80 w-80 rounded-full bg-accent/5 blur-3xl" />
+        <div className="absolute -bottom-40 -right-40 h-80 w-80 rounded-full bg-accent/5 blur-3xl" />
       </div>
       <div className="relative mx-auto max-w-6xl px-6 py-24 md:py-32">
         <div className="flex items-center gap-4">
-          <span className="font-mono text-sm tracking-[0.2em] text-[#EAB308]">03</span>
-          <span className="h-px w-8 bg-[#EAB308]/40" />
+          <span className="font-mono text-sm tracking-[0.2em] text-accent">03</span>
+          <span className="h-px w-8 bg-accent/40" />
           <h2 className="font-serif text-4xl font-black text-white sm:text-5xl md:text-6xl lg:text-7xl">
             Selected Work
           </h2>
         </div>
-        <hr className="mt-4 border-0 h-px bg-gradient-to-r from-white/10 via-[#EAB308]/30 to-white/10" />
+        <hr className="mt-4 border-0 h-px bg-gradient-to-r from-white/10 via-accent/30 to-white/10" />
 
         <div className="mt-16">
           {projects.map((project, i) => {
@@ -54,7 +54,7 @@ export default function WorkSection() {
                 {i > 0 && (
                   <div className="relative my-20 flex items-center justify-center md:my-32">
                     <div className="h-px flex-1 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-                    <div className="mx-4 h-2 w-2 rotate-45 border border-white/20 bg-[#0A0A0A]" />
+                    <div className="mx-4 h-2 w-2 rotate-45 border border-white/20 bg-dark" />
                     <div className="h-px flex-1 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
                   </div>
                 )}
@@ -64,7 +64,7 @@ export default function WorkSection() {
                   }`}
                 >
                 <motion.div
-                  className="group relative overflow-hidden border border-white/10 transition-colors duration-500 hover:border-[#EAB308]/30"
+                  className="group relative overflow-hidden border border-white/10 transition-colors duration-500 hover:border-accent/30"
                   whileHover={{ y: -4, boxShadow: "0 0 30px rgba(234,179,8,0.06)" }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
@@ -80,7 +80,7 @@ export default function WorkSection() {
                       />
                     ) : (
                       <>
-                        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#0A0A0A]" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-dark" />
                         <div className="absolute inset-0 flex items-center justify-center" role="img" aria-label={`${project.name} project image placeholder`}>
                           <span className="font-serif text-5xl font-black text-white/10 sm:text-6xl md:text-7xl">
                             {project.name}
@@ -88,17 +88,17 @@ export default function WorkSection() {
                         </div>
                       </>
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/60 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                   </div>
                   <div className="pointer-events-none absolute left-2 top-2 h-3 w-3 border-l border-t border-white/20" />
                   <div className="pointer-events-none absolute right-2 top-2 h-3 w-3 border-r border-t border-white/20" />
                   <div className="pointer-events-none absolute bottom-2 left-2 h-3 w-3 border-b border-l border-white/20" />
                   <div className="pointer-events-none absolute bottom-2 right-2 h-3 w-3 border-b border-r border-white/20" />
-                  <span className="absolute left-3 top-3 flex h-8 w-8 items-center justify-center border border-white/20 bg-black font-mono text-sm font-bold text-[#EAB308]">
+                  <span className="absolute left-3 top-3 flex h-8 w-8 items-center justify-center border border-white/20 bg-black font-mono text-sm font-bold text-accent">
                     {project.index}
                   </span>
                   {project.badge && (
-                    <span className="absolute left-3 top-14 bg-[#EAB308] px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-[#0A0A0A] shadow-sm animate-pulse">
+                    <span className="absolute left-3 top-14 bg-accent px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-[#0A0A0A] shadow-sm animate-pulse">
                       {project.badge}
                     </span>
                   )}
@@ -106,8 +106,8 @@ export default function WorkSection() {
 
                 <div className="flex flex-col justify-center">
                   <div className="flex items-center gap-2">
-                    <span className="h-3 w-px bg-[#EAB308]/60" />
-                    <span className="font-mono text-xs tracking-[0.2em] text-[#818281]">
+                    <span className="h-3 w-px bg-accent/60" />
+                    <span className="font-mono text-xs tracking-[0.2em] text-muted">
                       {project.category}
                     </span>
                   </div>
@@ -118,7 +118,7 @@ export default function WorkSection() {
                         href={project.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#818281] transition-colors hover:text-[#EAB308]"
+                        className="text-muted transition-colors hover:text-accent"
                         aria-label={`${project.name} live demo`}
                       >
                         <ExternalLinkIcon />
@@ -129,21 +129,21 @@ export default function WorkSection() {
                         href={project.repo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#818281] transition-colors hover:text-[#EAB308]"
+                        className="text-muted transition-colors hover:text-accent"
                         aria-label={`${project.name} repository`}
                       >
                         <GitHubIcon />
                       </a>
                     )}
                   </h3>
-                  <p className="mt-3 text-base leading-relaxed text-[#818281]">
+                  <p className="mt-3 text-base leading-relaxed text-muted">
                     {project.description}
                   </p>
                   <div className="mt-5 flex flex-wrap gap-2">
                     {project.techStack.map((tech) => (
                       <span
                         key={tech}
-                        className="rounded-sm border border-white/10 px-2.5 py-1 font-mono text-[11px] text-[#818281] transition-colors hover:border-[#EAB308]/40 hover:text-[#EAB308]"
+                        className="rounded-sm border border-white/10 px-2.5 py-1 font-mono text-[11px] text-muted transition-colors hover:border-accent/40 hover:text-accent"
                       >
                         {tech}
                       </span>
@@ -155,7 +155,7 @@ export default function WorkSection() {
                         href={project.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 rounded-sm border border-[#EAB308] px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest text-[#EAB308] transition-colors hover:bg-[#EAB308] hover:text-[#0A0A0A] sm:px-4 sm:py-2 sm:text-xs"
+                        className="inline-flex items-center justify-center gap-2 rounded-sm border border-accent px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest text-accent transition-colors hover:bg-accent hover:text-[#0A0A0A] sm:px-4 sm:py-2 sm:text-xs"
                       >
                         View Live
                         <ExternalLinkIcon />

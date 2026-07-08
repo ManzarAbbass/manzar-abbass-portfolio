@@ -4,6 +4,8 @@
   --font-serif: var(--font-serif);
   --font-mono: var(--font-mono);
   --color-accent: #EAB308;
+  --color-muted: #818281;
+  --color-dark: #0A0A0A;
   --animate-spin-slow: spin-slow 20s linear infinite;
   --animate-spin-reverse: spin-reverse 25s linear infinite;
   --animate-shimmer: shimmer 3s ease-in-out infinite;

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -14,38 +15,38 @@ export default function HeroSection() {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <div className="flex items-center gap-2">
-            <span className="h-px w-8 shrink-0 bg-[#EAB308]/40" />
-            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#EAB308] sm:text-xs">
-              FullStack Developer<span className="mx-2 text-[#EAB308]/40">●</span>Open to Opportunities
+            <span className="h-px w-8 shrink-0 bg-accent/40" />
+            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-accent sm:text-xs">
+              FullStack Developer<span className="mx-2 text-accent/40">●</span>Open to Opportunities
             </span>
           </div>
 
           <h1 className="mt-6 font-serif text-4xl font-black leading-none tracking-tight [text-shadow:_0_0_1px_#fff,0_0_2px_rgba(255,255,255,0.3)] sm:text-5xl md:text-7xl lg:text-8xl">
             I build{" "}
-            <span className="italic font-black text-[#818281]">software</span>{" "}
+            <span className="italic font-black text-muted">software</span>{" "}
             that&nbsp;ships.
           </h1>
 
-          <p className="mt-6 max-w-lg text-base leading-relaxed text-[#818281] sm:text-lg md:text-left">
+          <p className="mt-6 max-w-lg text-base leading-relaxed text-muted sm:text-lg md:text-left">
             Full-stack web apps and SaaS tools built with Next.js,
             TypeScript, and modern databases. Self-taught developer
             focused on clean architecture and shipping fast.
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start sm:gap-4">
-            <a
+            <Link
               href="/#work"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-sm border border-[#EAB308] px-4 py-2.5 font-mono text-xs uppercase tracking-widest text-[#EAB308] transition-colors hover:bg-[#EAB308] hover:text-[#0A0A0A] sm:w-auto sm:px-6 sm:py-3 sm:text-sm"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-sm border border-accent px-4 py-2.5 font-mono text-xs uppercase tracking-widest text-accent transition-colors hover:bg-accent hover:text-dark sm:w-auto sm:px-6 sm:py-3 sm:text-sm"
             >
               See my work
               <span className="text-base leading-none sm:text-lg">&darr;</span>
-            </a>
-            <a
+            </Link>
+            <Link
               href="/#contact"
               className="inline-flex w-full items-center justify-center gap-2 rounded-sm border border-white/20 px-4 py-2.5 font-mono text-xs uppercase tracking-widest text-gray-300 transition-colors hover:border-white/50 hover:text-white sm:w-auto sm:px-6 sm:py-3 sm:text-sm"
             >
               Get in touch
-            </a>
+            </Link>
           </div>
         </motion.div>
 
@@ -57,9 +58,9 @@ export default function HeroSection() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
         >
           <div className="relative aspect-square w-full max-w-md">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#EAB308]/10 via-transparent to-[#EAB308]/5 blur-3xl animate-orb-pulse" />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/10 via-transparent to-accent/5 blur-3xl animate-orb-pulse" />
 
-            <div className="absolute left-1/2 top-1/2 h-3/4 w-3/4 -translate-x-1/2 -translate-y-1/2 animate-spin-slow rounded-2xl border border-[#EAB308]/30 bg-[#0A0A0A] shadow-[0_0_30px_rgba(234,179,8,0.15)]" />
+            <div className="absolute left-1/2 top-1/2 h-3/4 w-3/4 -translate-x-1/2 -translate-y-1/2 animate-spin-slow rounded-2xl border border-accent/30 bg-dark shadow-[0_0_30px_rgba(234,179,8,0.15)]" />
 
             <svg
               viewBox="0 0 400 400"

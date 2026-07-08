@@ -51,18 +51,18 @@ export default function ProcessSection() {
   return (
     <section id="process" className="relative border-b border-white/20">
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -left-40 -top-40 h-80 w-80 rounded-full bg-[#EAB308]/5 blur-3xl" />
-        <div className="absolute -bottom-40 -right-40 h-80 w-80 rounded-full bg-[#EAB308]/5 blur-3xl" />
+        <div className="absolute -left-40 -top-40 h-80 w-80 rounded-full bg-accent/5 blur-3xl" />
+        <div className="absolute -bottom-40 -right-40 h-80 w-80 rounded-full bg-accent/5 blur-3xl" />
       </div>
       <div className="relative mx-auto max-w-6xl px-6 py-24 md:py-32">
         <div className="flex items-center gap-4">
-          <span className="font-mono text-sm tracking-[0.2em] text-[#EAB308]">04</span>
-          <span className="h-px w-8 bg-[#EAB308]/40" />
+          <span className="font-mono text-sm tracking-[0.2em] text-accent">04</span>
+          <span className="h-px w-8 bg-accent/40" />
           <h2 className="font-serif text-4xl font-black text-white sm:text-5xl md:text-6xl lg:text-7xl">
             How it Works
           </h2>
         </div>
-        <hr className="mt-4 border-0 h-px bg-gradient-to-r from-white/10 via-[#EAB308]/30 to-white/10" />
+        <hr className="mt-4 border-0 h-px bg-gradient-to-r from-white/10 via-accent/30 to-white/10" />
 
         <motion.div
           className="relative mt-16 grid grid-cols-1 md:grid-cols-4"
@@ -79,13 +79,13 @@ export default function ProcessSection() {
               whileHover={{ y: -4, boxShadow: "0 0 30px rgba(234,179,8,0.06)" }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
-              <span className="font-mono text-5xl font-black text-[#EAB308]/10 md:text-6xl">
+              <span className="font-mono text-5xl font-black text-accent/10 md:text-6xl">
                 {step.id}
               </span>
               <h3 className="mt-1 font-serif text-xl font-black leading-tight text-white sm:text-2xl">
                 {step.title}
               </h3>
-              <p className="mt-3 text-base leading-relaxed text-[#818281]">
+              <p className="mt-3 text-base leading-relaxed text-muted">
                 {step.description}
               </p>
             </motion.div>
