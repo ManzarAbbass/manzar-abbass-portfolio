@@ -43,6 +43,8 @@ opencode.json
 # project context / ai guidelines
 context/
 
+# ai agents
+AGENTS.md
 
 # typescript
 *.tsbuildinfo
