@@ -2,7 +2,7 @@
 
 A personal freelance portfolio website for **Manzar Abbass**, a Full Stack Developer specialising in web apps and SaaS tools using Next.js, TypeScript, and modern databases.
 
-**[Live Site](https://manzar-developer.vercel.app)** — [Contact](mailto:manzarja32@gmail.com)
+**[Live Site](https://manzar-developer.vercel.app)** &nbsp;·&nbsp; [Contact](mailto:manzarja32@gmail.com)
 
 ## Tech Stack
 
