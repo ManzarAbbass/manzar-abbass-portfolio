@@ -36,6 +36,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# opencode
+opencode.json
+.opencode/
+
+# project context / ai guidelines
+context/
 
 
 # typescript
